@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block style %}
+* {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: right;
+  width: 30%;
+  padding: 10px;
+  height: 300px; 
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.btn {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+
+.success {background-color: #04AA6D;} /* Green */
+.success:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {background: #e68a00;}
+
+{% endblock %}
+
+{% block body %}
+<img src="static/images/second_image.jpg" alt="Girl in a jacket" width="50%" style="color:blue; display:block; margin-left:auto; margin-right:auto;" >
+<h2 style="text-align : center;"><i>What do you want to Check!</i></h2>
+
+<div class="row">
+  <div class="column" >
+    <h3><u>Heart Disease</u></h3>
+    <img src="static/images/small_heart.jpg" alt="Avatar" style="width:200px;  border-radius: 50%;"><br>
+    <button class="btn success" style="margin-right: 90px; margin-top: 70px;"><a href="/heart">Click here</a></button>
+  </div>
+  <div class="column">
+    <h3 style="margin-right: 100px;"><u>Lungs Disease</u></h3>
+    <img src="static/images/small_lungs.jpg" alt="Avatar" style="width:200px;  border-radius: 53%;"><br>
+    <button class="btn info" style="margin-right: 100px; margin-top: 70px;"><a href="#">Click here</a></button>
+  </div>
+  <div class="column">
+    <h3 style = "margin-left: 100px;"><u>Liver Disease</u></h3><br>
+    <img src="static/images/small_kidney.jpg" alt="Avatar" style="width:195px; height: 195px; border-radius: 50%; margin-left: 100px;"><br>
+    <button class="btn warning" style="margin-left: 100px; margin-top: 70px;"><a href="/liver">Click here</a></button>
+  </div>
+</div><br>
+<br>
+<br>
+{% endblock %}
